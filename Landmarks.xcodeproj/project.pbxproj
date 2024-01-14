@@ -16,6 +16,7 @@
 		E334B2662B52C03F003F7864 /* LandmarksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E334B2652B52C03F003F7864 /* LandmarksUITestsLaunchTests.swift */; };
 		E334B2732B52D53E003F7864 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E334B2722B52D53E003F7864 /* CircleImage.swift */; };
 		E334B2752B52DA31003F7864 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E334B2742B52DA31003F7864 /* MapView.swift */; };
+		E364EEA42B53F36B000E413E /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = E364EEA32B53F36A000E413E /* landmarkData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E334B2652B52C03F003F7864 /* LandmarksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E334B2722B52D53E003F7864 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		E334B2742B52DA31003F7864 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E364EEA32B53F36A000E413E /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		E334B2472B52C03E003F7864 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				E364EEA32B53F36A000E413E /* landmarkData.json */,
 				E334B2482B52C03E003F7864 /* LandmarksApp.swift */,
 				E334B24A2B52C03E003F7864 /* ContentView.swift */,
 				E334B24C2B52C03F003F7864 /* Assets.xcassets */,
@@ -239,6 +242,7 @@
 			files = (
 				E334B2502B52C03F003F7864 /* Preview Assets.xcassets in Resources */,
 				E334B24D2B52C03F003F7864 /* Assets.xcassets in Resources */,
+				E364EEA42B53F36B000E413E /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
