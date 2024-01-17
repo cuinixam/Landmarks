@@ -10,7 +10,7 @@ import SwiftUI
 struct LandmarkList: View {
     var body: some View {
         // List work with identifiables. We provide the .id to be used as identifible (it must be unique).
-        List(landmarks, id: \.id) { landmark in
+        List(landmarks) { landmark in
             LandmarkRow(landmark: landmark)
         }
     }

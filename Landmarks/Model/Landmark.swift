@@ -14,8 +14,8 @@ import CoreLocation
 // Addding Codable conformance makes it easier to move data between the structure and a data file
 // The original name is stored in a json file. We will rely on the Decodable component of the Codable
 // protocol to read data from the file
-struct Landmark: Hashable, Codable {
-    var id: Int
+struct Landmark: Hashable, Codable, Identifiable {
+    var id: Int // required by the Identifiable protocol
     var name: String
     var park: String
     var state: String
