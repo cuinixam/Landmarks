@@ -9,33 +9,25 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    var name: String
+    var coordinate: CLLocationCoordinate2D
+    
     var body: some View {
-        Map(coordinateRegion: $region,
-            annotationItems: [place]
-        ){
-            somePlace in
-            MapMarker(coordinate: somePlace.coordinate, tint: .red)
-          }
+        // Use a .constant binding because the MapView doesn't need to detect when someone changes the position by interacting with the map.
+        Map(position: .constant(.region(region))) {
+            Marker(name, coordinate: coordinate)
+        }
     }
     
-    @State private var region =
+    private var region: MKCoordinateRegion {
         MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
+            center: coordinate,
             span: MKCoordinateSpan(latitudeDelta: 0.2
                                    , longitudeDelta: 0.2)
         )
-    
-    
-    struct Place: Identifiable {
-            let id = UUID()
-            let name: String
-            let coordinate: CLLocationCoordinate2D
-        }
-    
-   @State private var place = Place(name: "Turtle Rock", coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
-
+    }
 }
 
 #Preview {
-    MapView()
+    MapView(name: landmarks[0].name, coordinate: landmarks[0].locationCoordinate)
 }

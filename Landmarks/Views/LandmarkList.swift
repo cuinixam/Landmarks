@@ -9,9 +9,18 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
-        // List work with identifiables. We provide the .id to be used as identifible (it must be unique).
-        List(landmarks) { landmark in
-            LandmarkRow(landmark: landmark)
+        NavigationSplitView {
+            // List work with identifiables. We provide the .id to be used as identifible (it must be unique).
+            List(landmarks) { landmark in
+                NavigationLink {
+                    LandmarkDetail(landmark: landmark)
+                } label: {
+                    LandmarkRow(landmark: landmark)
+                }
+            }
+            .navigationTitle("Landmarks")
+        } detail: {
+            Text("Select a Landmark")
         }
     }
 }
