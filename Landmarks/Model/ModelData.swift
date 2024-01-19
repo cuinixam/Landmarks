@@ -7,7 +7,11 @@
 
 import Foundation
 
-var landmarks: [Landmark] = load("landmarkData.json")
+@Observable
+class ModelData {
+    var landmarks: [Landmark] = load("landmarkData.json")
+}
+
 
 // This is a Swift function named "load".
 // It's designed to read and decode data from a file.
