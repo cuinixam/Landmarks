@@ -29,5 +29,6 @@ struct MapView: View {
 }
 
 #Preview {
-    MapView(name: landmarks[0].name, coordinate: landmarks[0].locationCoordinate)
+    let landmarks = ModelData().landmarks
+    return MapView(name: landmarks[0].name, coordinate: landmarks[0].locationCoordinate)
 }
