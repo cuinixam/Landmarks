@@ -10,6 +10,11 @@ import Foundation
 @Observable
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
+    var hikes: [Hike] = load("hikeData.json")
+    var categories : [String: [Landmark]] {
+        // Group the landmarks based on their category name
+        Dictionary(grouping: landmarks, by: {$0.category.rawValue})
+    }
 }
 
 
